@@ -84,14 +84,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 32
               ),
             ),
+            SizedBox(height: 100, width: 1000,
+            child:
             TextField(
               textAlign: TextAlign.center,
-              style:const TextStyle(fontSize: 27, fontFamily: 'Times New Roman', color: Colors.grey),
+              minLines: 1,
+              maxLines: 2,
+              style:const TextStyle(fontSize: 27, fontFamily: 'Times New Roman'),
               controller: control,
               onChanged: (text){_getStringLength();},
               decoration: const InputDecoration(
-                  hintText: 'Введите текст',
+                hintText: 'Введите текст',
               ),
+            ),
             ),
             const SizedBox(height: 10),
             ElevatedButton(
